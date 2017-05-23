@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:task="http://www.springframework.org/schema/task"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+    http://www.springframework.org/schema/task   
+    http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+	<task:annotation-driven /> 
+		
+	<!-- <bean id="quartzJob" class="com.wyy.spider.jobs.QuartzJob">
+		<property name="quartzBiz" ref="quartzBiz" /> 
+		<property name="redisUtil" ref="redisUtil" />
+	</bean> 
+	
+	<bean id="quartzBiz" class ="com.wyy.spider.jobs.biz.impl.QuartzBizImpl">
+		<property name="airAsiaBiz" ref="iAirAsiaSpiderBiz" /> 
+	</bean>
+	
+	 这里表示的是从第五秒开始 ，每三秒执行一次 （而不是 三分之五 秒执行一次哦~~）   
+       cron表达式 
+			字段 允许值 允许的特殊字符
+			秒 0-59 , - * /
+			分 0-59 , - * /
+			小时 0-23 , - * /
+			日期 1-31 , - * ? / L W C
+			月份 1-12 或者 JAN-DEC , - * /
+			星期 1-7 或者 SUN-SAT , - * ? / L C #
+			<task:scheduled ref="quartzJob" method="hello" cron="5/3 * * * * ?"/>  
+		
+	
+	
+	<task:scheduled-tasks scheduler="myScheduler">  
+		
+        <task:scheduled ref="quartzJob" method="dealAirLine01" cron="0 0/6 * * * ?" /> 
+        <task:scheduled ref="quartzJob" method="dealAirLine02" cron="0 0/6 * * * ?" />
+        <task:scheduled ref="quartzJob" method="dealAirLine03" cron="0 0/7 * * * ?" />
+        <task:scheduled ref="quartzJob" method="dealAirLine04" cron="0 0/7 * * * ?" />
+        
+    </task:scheduled-tasks>
+    
+    <task:scheduler id="myScheduler" pool-size="500"/>  -->
+    
+</beans>
+
+
